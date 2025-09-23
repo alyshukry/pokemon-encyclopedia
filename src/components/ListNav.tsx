@@ -9,19 +9,19 @@ function ListNav({ number, onSelect }: Props): ReactElement {
     const offset = 2
     const start = Math.max(0, number - offset)
 
-    const max = Math.floor(1301 / 20)
+    const max = Math.floor(1301 / 16)
 
     return (
-        <div id="list-nav" className="flex gap-4">
-            <div className="prev arrow" onClick={() => onSelect(0)}>{"<<"}</div>
-            <div className="prev arrow" onClick={() => {if (number > 0) onSelect(number - 1)}}>{"<"}</div>
-            <div className={`list-${start + 0}` + `${number === start + 0 ? " font-bold" : ""}`} onClick={() => onSelect(start + 0)}>{start + 1}</div>
-            <div className={`list-${start + 1}` + `${number === start + 1 ? " font-bold" : ""}`} onClick={() => onSelect(start + 1)}>{start + 2}</div>
-            <div className={`list-${start + 2}` + `${number === start + 2 ? " font-bold" : ""}`} onClick={() => onSelect(start + 2)}>{start + 3}</div>
-            <div className={`list-${start + 3}` + `${number === start + 3 ? " font-bold" : ""}`} onClick={() => onSelect(start + 3)}>{start + 4}</div>
-            <div className={`list-${start + 4}` + `${number === start + 4 ? " font-bold" : ""}`} onClick={() => onSelect(start + 4)}>{start + 5}</div>
-            <div className="next arrow" onClick={() => {{if (number < max) onSelect(number + 1)}}}>{">"}</div>
-            <div className="prev arrow" onClick={() => onSelect(max)}>{">>"}</div>
+        <div id="list-nav" className="flex gap-4 text-2xl mt-12 *:size-8 *:flex *:items-center *:justify-center *:rounded-full">
+            <div onClick={() => onSelect(0)}>{"<<"}</div>
+            <div onClick={() => {if (number > 0) onSelect(number - 1)}}>{"<"}</div>
+            <div className={`list-${start + 0}` + `${number === start + 0 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 0)}>{start + 1}</div>
+            <div className={`list-${start + 1}` + `${number === start + 1 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 1)}>{start + 2}</div>
+            <div className={`list-${start + 2}` + `${number === start + 2 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 2)}>{start + 3}</div>
+            <div className={`list-${start + 3}` + `${number === start + 3 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 3)}>{start + 4}</div>
+            <div className={`list-${start + 4}` + `${number === start + 4 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 4)}>{start + 5}</div>
+            <div onClick={() => {{if (number < max) onSelect(number + 1)}}}>{">"}</div>
+            <div onClick={() => onSelect(max)}>{">>"}</div>
         </div>
     )
 }

@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'pokemon';
+  src: url(./assets/fonts/pokemon-dp-pro.ttf);
+}
+
 #root {
   width: 100%;
 }
+
+body {
+  /* background: repeating-conic-gradient(#20a0f3 0 25%, #31aeff 0 50%) 50% / 3.5rem 3.5rem;
+  animation: slide-diagonal 100s linear infinite; */
+
+  font-family: 'pokemon';
+  /* color: white; */
+  letter-spacing: 1px;
+}
+
+/* @keyframes slide-diagonal {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -100% 100%;
+  }
+} */

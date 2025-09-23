@@ -13,8 +13,8 @@ function List({ number }: Props): ReactElement {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch first 20 Pokemon
-                const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${number * 20}`)
+                // Fetch first 16 Pokemon
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=16&offset=${number * 16}`)
                 if (!response.ok) throw new Error(`Error status: ${response.status}`)
                 const result = await response.json()
 
@@ -42,7 +42,7 @@ function List({ number }: Props): ReactElement {
 
 
     return (
-        <div id="pokemon-buttons" className="flex flex-row flex-wrap gap-4">
+        <div id="pokemon-buttons" className="flex flex-row flex-wrap gap-6 items-center justify-center pr-8 pl-8">
             {data.map((pokemon) => (
                 <PokemonButton
                     key={pokemon.id}
