@@ -2,15 +2,16 @@ import type { ReactElement } from 'react'
     import { useNavigate } from 'react-router-dom'
 
 interface Props {
+    id: string,
     name: string,
     sprite: string,
 }
 
-function PokemonButton({ name, sprite }: Props): ReactElement {
+function PokemonButton({ id, name, sprite }: Props): ReactElement {
     const navigate = useNavigate()
 
     function handleClick() {
-        navigate(`/${name}`)
+        navigate(`/${id}`)
     }
 
     return (

@@ -46,6 +46,7 @@ function List({ number }: Props): ReactElement {
             {data.map((pokemon) => (
                 <PokemonButton
                     key={pokemon.id}
+                    id={pokemon.id}
                     name={pokemon.name}
                     sprite={pokemon.sprites.front_default}
                 />
