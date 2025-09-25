@@ -9,10 +9,10 @@ function ListNav({ number, onSelect }: Props): ReactElement {
     const offset = 2
     const start = Math.max(0, number - offset)
 
-    const max = Math.floor(1301 / 16)
+    const max = Math.floor(1301 / 50)
 
     return (
-        <div id="list-nav" className="flex gap-4 text-2xl mt-12 *:size-8 *:flex *:items-center *:justify-center *:rounded-full">
+        <div id="list-nav" className="flex gap-4 text-2xl text-black mt-12 *:size-8 *:flex *:items-center *:justify-center *:hover:cursor-pointer">
             <div onClick={() => onSelect(0)}>{"<<"}</div>
             <div onClick={() => {if (number > 0) onSelect(number - 1)}}>{"<"}</div>
             <div className={`list-${start + 0}` + `${number === start + 0 ? " text-white bg-red-500" : ""}`} onClick={() => onSelect(start + 0)}>{start + 1}</div>

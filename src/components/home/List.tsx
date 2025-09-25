@@ -14,7 +14,7 @@ function List({ number }: Props): ReactElement {
         const fetchData = async () => {
             try {
                 // Fetch first 16 Pokemon
-                const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=16&offset=${number * 16}`)
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=50&offset=${number * 50}`)
                 if (!response.ok) throw new Error(`Error status: ${response.status}`)
                 const result = await response.json()
 

@@ -1,16 +1,19 @@
 import './App.css'
 import type { ReactElement } from 'react'
-import Header from './components/Header'
-import Main from './components/Main'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from './pages/Home.tsx'
+import PokemonPage from './pages/PokemonPage.tsx'
 
 function App(): ReactElement {
-  
-  return (
-    <>
-      <Header></Header>
-      <Main></Main>
-    </>
-  )
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/pokemon" element={<PokemonPage />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App

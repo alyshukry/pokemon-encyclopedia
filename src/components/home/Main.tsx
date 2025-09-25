@@ -1,5 +1,6 @@
 import { useState, useEffect, type ReactElement } from "react"
 import { useSearchParams } from "react-router-dom"
+import pokemonLogo from '../../assets/pokemon-logo.svg'
 import ListNav from "./ListNav.tsx"
 import List from "./List.tsx"
 
@@ -14,8 +15,8 @@ function Main(): ReactElement {
     }, [currentList, setSearchParams])
 
     return (
-        <main className="flex flex-col items-center w-1/1 mt-20">
-            <p id="title" className="text-4xl self-start ml-8 mb-6">Pokemon List</p>
+        <main className="flex flex-col items-center w-1/1 mt-4 mb-4">
+            <img id="logo" src={pokemonLogo} className="w-48 mb-8" />
             <List number={currentList}></List>
             <ListNav number={currentList} onSelect={setCurrentList} />
         </main>
