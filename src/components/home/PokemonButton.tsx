@@ -10,7 +10,7 @@ function PokemonButton({ name, sprite }: Props): ReactElement {
     const navigate = useNavigate()
 
     function handleClick() {
-        navigate(`/pokemon?name=${name}`)
+        navigate(`/${name}`)
     }
 
     return (

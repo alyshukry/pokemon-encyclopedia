@@ -1,12 +1,12 @@
 import { useState, useEffect, type ReactElement } from "react"
-import { useSearchParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import pokemonLogo from '../../assets/pokemon-logo.svg'
 import Sprites from './Sprites'
 import Text from './Text.tsx'
 
 function Main(): ReactElement | undefined {
-    const [searchParams] = useSearchParams()
-    const pageFromUrl = searchParams.get("name")
+    const { id } = useParams()
+    const pageFromUrl = id
 
     const [pokemon, setPokemon] = useState<any>(null)
     const [species, setSpecies] = useState<any>(null)

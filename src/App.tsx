@@ -10,7 +10,7 @@ function App(): ReactElement {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/pokemon" element={<PokemonPage />} />
+                <Route path="/:id" element={<PokemonPage />} />
             </Routes>
         </BrowserRouter>
     )
