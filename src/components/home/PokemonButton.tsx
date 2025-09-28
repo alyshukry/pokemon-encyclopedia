@@ -17,7 +17,7 @@ function PokemonButton({ id, name, sprite }: Props): ReactElement {
     return (
         <div 
             id="pokemon-button" 
-            className="size-32 flex flex-col items-center hover:cursor-pointer hover:scale-110 transition-all" style={{ imageRendering: "pixelated" }}
+            className="size-32 flex flex-col items-center hover:cursor-pointer hover:scale-110 transition-all z-0" style={{ imageRendering: "pixelated" }}
             onClick={handleClick}
         >
             <img className="sprite size-5/6" src={sprite} alt={name} />

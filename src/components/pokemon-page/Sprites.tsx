@@ -1,13 +1,13 @@
 import type { ReactElement } from "react";
 
 interface SpritesObject {
-    front_default: string;
-    back_default: string;
-    front_shiny: string;
+    front_default: string
+    back_default: string
+    front_shiny: string
 }
 
 interface Props {
-    sprites: SpritesObject;
+    sprites: SpritesObject
 }
 
 function Sprites({ sprites }: Props): ReactElement {

@@ -43,7 +43,7 @@ function Main(): ReactElement | undefined {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
 
-    if (pokemon) return (
+    if (pokemon && species) return (
         <main className="flex items-center justify-center flex-col gap-4 w-1/1 h-svh p-8">
             <img id="logo" onClick={handleClick} src={pokemonLogo} className="w-58 mb-8 hover:cursor-pointer" />
             <Sprites sprites={pokemon.sprites} />
